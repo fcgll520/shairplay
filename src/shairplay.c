@@ -249,7 +249,7 @@ audio_set_volume(void *cls, void *opaque, float volume)
 {
 	shairplay_session_t *session = opaque;
 	//session->volume = pow(10.0, 0.05*volume);
-	session1->volume = volume < -30.0f ? 0 : 1 - volume / -30;
+	session->volume = volume < -30.0f ? 0 : 1 - volume / -30;
 }
 
 static int
